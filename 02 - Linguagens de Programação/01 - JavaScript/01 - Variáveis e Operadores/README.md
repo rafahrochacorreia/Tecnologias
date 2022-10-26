@@ -6,8 +6,8 @@ JavaScript pega emprestado a maior parte de sua sintaxe do Java, mas também é 
 
 JavaScript é case-sensitive e usa o conjunto de caracteres Unicode. Por exemplo, a palavra Früh (que significa "cedo" em Alemão) pode ser usada como nome de variável.
 
-#### var Früh = "foobar";
-
+>var Früh = "foobar";
+>
 >Mas a variável früh não é a mesma que Früh porque JavaScript é case sensitive.
 
 No JavaScript, instruções são chamadas de declaração e são separadas por um ponto e vírgula (;). Espaços, tabulação e uma nova linha são chamados de espaços em branco. O código fonte dos scripts em JavaScript são lidos da esquerda para a direita e são convertidos em uma sequência de elementos de entrada como simbolos, caracteres de controle, terminadores de linha, comentários ou espaço em branco. ECMAScript também define determinadas palavras-chave e literais, e tem regras para inserção automática de ponto e vírgula (ASI) para terminar as declarações. No entanto, recomenda-se sempre adicionar ponto e vírgula no final de suas declarações; isso evitará alguns imprevistos. Para obter mais informações, consulte a referência detalhada sobre a gramática léxica do JavaScript.
@@ -42,7 +42,7 @@ Um identificador JavaScript deve começar com uma letra, underline (_), ou cifr�
 
 Alguns exemplos de nomes legais são Numeros_visitas, temp99, e _nome.
 
-### Declarando variáveis
+## Declarando variáveis
 Você pode declarar uma variável de três formas:
 
 - Com a palavra chave var. Por exemplo, var x = 42. Esta sintaxe pode ser usada para declarar tanto variáveis locais como variáveis globais.
@@ -98,7 +98,7 @@ Esse comportamento é alterado, quando usado a declaração let introduzida pelo
 >}
 >console.log(y);  // ReferenceError: y não está definido
 
-### Variável de elevação
+## Variável de elevação
 Outra coisa incomum sobre variáveis em JavaScript é que você pode utilizar a variável e declará-la depois, sem obter uma exceção. Este conceito é conhecido como hoisting; variáveis em JavaScript são num sentido "hoisted" ou lançada para o topo da função ou declaração. No entanto, as variáveis que são "hoisted" retornarão um valor undefined. Então, mesmo se você usar ou referir a variável e depois declará-la e inicializá-la, ela ainda retornará undefined.
 
 >/**
@@ -140,12 +140,12 @@ Os exemplos acima serão interpretados como:
 
 Devido o hoisting, todas as declarações var em uma função devem ser colocadas no início da função. Essa recomendação de prática deixa o código mais legível.
 
-### Variáveis Globais
+## Variáveis Globais
 Variáveis globais são propriedades do objeto global. Em páginas web o objeto global é a window, assim você pode configurar e acessar variáveis globais utilizando a sintaxe window.variavel.
 
 Consequentemente, você pode acessar variáveis globais declaradas em uma janela ou frame ou frame de outra janela. Por exemplo, se uma variável chamada phoneNumber é declarada em um documento, você pode consultar esta variável de um frame como parent.phoneNumber.
 
-### Constantes
+## Constantes
 Você pode criar uma constante apenas de leitura por meio da palavra-chave const. A sintaxe de um identificador de uma constante é semelhante ao identificador de uma variável: deve começar com uma letra, sublinhado ou cifrão e pode conter caractere alfabético, numérico ou sublinhado.
 
 >const PI = 3.14;
@@ -203,7 +203,7 @@ Nas declarações envolvendo outros operadores, JavaScript não converte valores
 >"37" - 7 // 30
 >"37" + 7 // "377"
 
-### Convertendo strings para números
+## Convertendo strings para números
 No caso de um valor que representa um número está armazenado na memória como uma string, existem métodos para a conversão.
 
 - parseInt()
@@ -226,7 +226,8 @@ Você usa literais para representar valores em JavaScript. Estes são valores fi
 - Inteiros
 - Objeto literal
 - String literal
-### Array literal
+
+## Array literal
 Um array literal é uma lista de zero ou mais expressões, onde cada uma delas representam um elemento do array, inseridas entre colchetes ([]). Quando você cria um array usando um array literal, ele é inicializado com os valores especificados como seus elementos, e seu comprimento é definido com o número de elementos especificados.
 
 O exemplo a seguir cria um array coffees com três elementos e um comprimento de três:
@@ -239,7 +240,7 @@ Se um array é criado usando um literal no topo do script, JavaScript interpreta
 
 Array literal são também um array de objetos. Veja Array e Coleções indexadas para detalhes sobre array de objetos.
 
-### Vírgulas extras em array literal
+## Vírgulas extras em array literal
 Você não precisa especificar todos os elementos em um array literal. Se você colocar duas vírgulas em uma linha, o array é criado com undefined para os elementos não especificados. O exemplo a seguir cria um array chamado fish:
 
 >var fish = ["Lion", , "Angel"];
@@ -262,26 +263,27 @@ No exemplo a seguir, o comprimento do array é quatro, e myList[1] e myList[3] s
 
 Entender o comportamento de vírgulas extras é importante para a compreensão da linguagem JavaScript, no entanto, quando você escrever seu próprio código: declarar explicitamente os elementos em falta como undefined vai aumentar a clareza do código, e consequentemente na sua manutenção.
 
-### Literais Boolean
+## Literais Boolean
 O tipo Boolean tem dois valores literal: true e false.
 
 Não confunda os valores primitivos Boolean true e false com os valores true e false do objeto Boolean. O objeto Boolean é um invólucro em torno do tipo de dado primitivo. Veja Boolean para mais informação.
 
-### Inteiros
+## Inteiros
 Inteiros podem ser expressos em decimal (base 10), hexadecimal (base 16), octal (base 8) e binário (base 2).
 
 - Decimal inteiro literal consiste em uma sequência de dígitos sem um 0 (zero).
 - 0 (zero) em um inteiro literal indica que ele está em octal. Octal pode incluir somente os dígitos 0-7.
 - 0x (ou 0X) indica um hexadecimal. Inteiros hexadecimais podem incluir dígitos (0-9) e as letras a-f e A-F.
 - 0b (ou 0B) indica um binário. Inteiros binário podem incluir apenas os dígitos 0 e 1.
-#### Alguns exemplos de inteiros literal são:
+
+## Alguns exemplos de inteiros literal são:
 
 >0, 117 and -345 (decimal, base 10)
 >015, 0001 and -077 (octal, base 8)
 >0x1123, 0x00111 and -0xF1A7 (hexadecimal, "hex" or base 16)
 >0b11, 0b0011 and -0b11 (binário, base 2)
 
-### Literais de ponto flutuante
+## Literais de ponto flutuante
 Um literal de ponto flutuante pode ter as seguintes partes:
 
 - Um inteiro decimal que pode ter sinal (precedido por "+" ou "-"),
@@ -301,7 +303,8 @@ Por exemplo:
 >-.123456789
 >-3.1E+12
 >.1e-23
-### Objeto literal
+
+## Objeto literal
 Um objeto literal é uma lista de zero ou mais pares de nomes de propriedades e valores associados de um objeto, colocado entre chaves ({}). Você não deve usar um objeto literal no início de uma declaração. Isso levará a um erro ou não se comportará conforme o esperado, porque o { será interpretado como início de um bloco.
 
 Segue um exemplo de um objeto literal. O primeiro elemento do objeto carro define uma propriedade, meuCarro, e atribui para ele uma nova string, "Punto"; o segundo elemento, a propriedade getCarro, é imediatamente atribuído o resultado de chamar uma função (tipoCarro("Fiat")); o terceiro elemento, a propriedade especial, usa uma variável existente (vendas).
@@ -350,11 +353,12 @@ Observe:
 >console.log(foo["a"]); // alpha
 >console.log(foo["2"]); // two
 
-### Expressão Regex Literal
+## Expressão Regex Literal
 Um regex literal é um padrão entre barras. A seguir um exemplo de regex literal.
 
 >var re = /ab+c/;
-### String Literal
+
+## String Literal
 Uma string literal são zero ou mais caracteres dispostos em aspas duplas (") ou aspas simples ('). Uma sequência de caracteres deve ser delimitada por aspas do mesmo tipo; ou seja, as duas aspas simples ou ambas aspas duplas. A seguir um exemplo de strings literais.
 
 >"foo"
@@ -371,7 +375,7 @@ Você pode chamar qualquer um dos métodos do objeto string em uma string litera
 
 Você deve usar string literal, a não ser que você precise usar um objeto string. Veja String para detalhes sobre objetos de strings.
 
-#### Uso de caracteres especiais em string
+## Uso de caracteres especiais em string
 Além dos caracteres comuns, você também pode incluir caracteres especiais em strings, como mostrado no exemplo a seguir.
 
 >"uma linha \n outra linha"
